@@ -29,6 +29,7 @@ void putinqueue(queue *the_queue, FILE *input, char *filename) {
       assert(linepos != NULL);
       queue_insert(the_queue, linepos);
    }
+   
 }
 
 void putfileinqueue(queue *the_queue, char *filename) {
@@ -63,7 +64,8 @@ int main (int argc, char **argv) {
 
    while (!queue_isempty(the_queue)) {
       printf("%s\n", queue_remove(the_queue));
+      free(linepos);
    }
-
+   queue_free(the_queue);
    return exit_status;
 }
