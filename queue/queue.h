@@ -3,7 +3,10 @@
 
 #include <stdbool.h>
 
-/* External interface declarations */
+/* queue.h
+ * contains the accesors and mutators for queue*/
+
+ /* External interface declarations */
 
 struct queue;
 typedef struct queue queue;

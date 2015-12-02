@@ -6,6 +6,11 @@
 #include "queue.h"
 
 #define STUBPRINTF(...) fprintf(stderr, __VA_ARGS__);
+/*queue.c
+ * The main class of the assignment, creates inserts and removes parts of the
+ * queue
+ */
+
 
 /* Internal implementation definitions */
 struct queue_node {

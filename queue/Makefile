@@ -1,3 +1,6 @@
+#Makefile for assignment 9
+#with phony targets all clean spotless test and deps
+
 MKFILE    = Makefile
 DEPSFILE  = ${MKFILE}.deps
 

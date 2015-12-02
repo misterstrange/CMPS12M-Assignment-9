@@ -7,6 +7,10 @@
 
 #include "queue.h"
 
+/*main.c
+ *The main program resposible for reading for a file name and/or asking for user 
+ * inputs
+*/
 char *execname = NULL;
 int exit_status = EXIT_SUCCESS;
 
@@ -63,8 +67,9 @@ int main (int argc, char **argv) {
    }
 
    while (!queue_isempty(the_queue)) {
-      printf("%s\n", queue_remove(the_queue));
-      free(linepos);
+      char *n = queue_remove(the_queue);
+      printf("%s\n", n);
+      free(n);
    }
    queue_free(the_queue);
    return exit_status;
